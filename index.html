@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrepVault NG — Nigeria's #1 Exam Prep Platform | NNPC, Banking, Military Past Questions</title>
+<meta name="description" content="Download real past questions for NNPC, GTBank, Zenith, Access, UBA, KPMG, Deloitte, ExxonMobil, Nigerian Immigration, Military and more. Instant PDF download. Nigeria's most complete exam prep vault.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0a0f2e;--gold:#c9a84c;--gold-light:#e8c97a;--cream:#f9f5ee;--white:#ffffff;--gray:#6b7280;--light-bg:#f3f0e8;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,15,46,0.97);backdrop-filter:blur(10px);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--gold);}
+  .logo span{color:var(--white);}
+  nav ul{list-style:none;display:flex;gap:2rem;}
+  nav ul a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s;}
+  nav ul a:hover{color:var(--gold);}
+  .nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:0.5rem 1.25rem;border-radius:50px;font-weight:600!important;}
+  .hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:6rem 2rem 4rem;}
+  .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(201,168,76,0.12) 0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(26,42,108,0.6) 0%,transparent 50%);}
+  .hero-grid{position:absolute;inset:0;opacity:0.04;background-image:linear-gradient(var(--gold) 1px,transparent 1px),linear-gradient(90deg,var(--gold) 1px,transparent 1px);background-size:60px 60px;}
+  .hero-content{position:relative;z-index:2;max-width:800px;text-align:center;}
+  .hero-badge{display:inline-block;background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.4);color:var(--gold);padding:0.4rem 1.2rem;border-radius:50px;font-size:0.8rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;}
+  .hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;color:var(--white);line-height:1.1;margin-bottom:1.5rem;}
+  .hero h1 em{color:var(--gold);font-style:normal;}
+  .hero p{font-size:1.1rem;color:rgba(255,255,255,0.7);line-height:1.7;max-width:600px;margin:0 auto 2.5rem;}
+  .hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+  .btn-primary{background:var(--gold);color:var(--navy);padding:0.9rem 2rem;border-radius:50px;font-weight:700;font-size:1rem;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;}
+  .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
+  .btn-secondary{background:transparent;color:var(--white);padding:0.9rem 2rem;border-radius:50px;font-weight:600;font-size:1rem;text-decoration:none;transition:all 0.2s;border:1px solid rgba(255,255,255,0.3);cursor:pointer;}
+  .btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
+  .hero-stats{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;margin-top:4rem;padding-top:3rem;border-top:1px solid rgba(255,255,255,0.1);}
+  .stat{text-align:center;}
+  .stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--gold);display:block;}
+  .stat-label{font-size:0.8rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;}
+  .search-section{background:var(--white);padding:2rem;}
+  .search-wrap{max-width:600px;margin:0 auto;position:relative;}
+  .search-wrap input{width:100%;padding:1rem 1.5rem 1rem 3rem;border:2px solid rgba(10,15,46,0.1);border-radius:50px;font-size:0.95rem;font-family:'DM Sans',sans-serif;outline:none;transition:border 0.2s;color:var(--navy);}
+  .search-wrap input:focus{border-color:var(--gold);}
+  .search-icon{position:absolute;left:1.1rem;top:50%;transform:translateY(-50%);color:var(--gray);}
+  .section{padding:5rem 2rem;}
+  .section-label{text-align:center;font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;}
+  .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;text-align:center;color:var(--navy);margin-bottom:1rem;}
+  .section-sub{text-align:center;color:var(--gray);font-size:1rem;max-width:550px;margin:0 auto 3rem;line-height:1.6;}
+  .packs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto;}
+  .pack-card{background:var(--white);border-radius:16px;padding:1.75rem;border:1px solid rgba(10,15,46,0.08);transition:all 0.3s;position:relative;overflow:hidden;}
+  .pack-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+  .pack-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(10,15,46,0.1);}
+  .pack-card:hover::before{transform:scaleX(1);}
+  .pack-tag{display:inline-block;background:rgba(201,168,76,0.12);color:var(--gold);padding:0.25rem 0.75rem;border-radius:50px;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:0.75rem;}
+  .pack-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem;}
+  .pack-card p{font-size:0.82rem;color:var(--gray);line-height:1.5;margin-bottom:1.25rem;}
+  .pack-footer{display:flex;align-items:center;justify-content:space-between;}
+  .pack-price{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--gold);}
+  .pack-price span{font-size:0.7rem;font-weight:400;color:var(--gray);display:block;}
+  .btn-buy{background:var(--navy);color:var(--white);padding:0.6rem 1.25rem;border-radius:50px;font-weight:700;font-size:0.82rem;border:none;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
+  .btn-buy:hover{background:#1a2a6c;transform:scale(1.05);}
+  .featured{background:var(--navy);}
+  .featured .section-title{color:var(--white);}
+  .featured .section-sub{color:rgba(255,255,255,0.6);}
+  .featured .pack-card{background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.2);}
+  .featured .pack-card:hover{background:rgba(255,255,255,0.08);border-color:var(--gold);}
+  .featured .pack-card h3{color:var(--white);}
+  .featured .pack-card p{color:rgba(255,255,255,0.55);}
+  .featured .pack-card::before{display:none;}
+  .steps{background:var(--light-bg);}
+  .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;max-width:900px;margin:0 auto;}
+  .step{text-align:center;padding:1.5rem;}
+  .step-num{width:56px;height:56px;background:var(--navy);color:var(--gold);border-radius:50%;font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;}
+  .step h3{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem;}
+  .step p{font-size:0.875rem;color:var(--gray);line-height:1.6;}
+  .cta-banner{background:linear-gradient(135deg,var(--navy) 0%,#1a2a6c 100%);padding:5rem 2rem;text-align:center;position:relative;overflow:hidden;}
+  .cta-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(201,168,76,0.15) 0%,transparent 70%);}
+  .cta-banner h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:1rem;position:relative;}
+  .cta-banner p{color:rgba(255,255,255,0.7);font-size:1rem;max-width:500px;margin:0 auto 2rem;line-height:1.6;position:relative;}
+  footer{background:#060a1f;padding:3rem 2rem 2rem;color:rgba(255,255,255,0.5);}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;max-width:1100px;margin:0 auto 2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.07);}
+  .footer-brand .logo{font-size:1.3rem;}
+  .footer-brand p{font-size:0.8rem;margin-top:0.5rem;max-width:220px;line-height:1.5;}
+  .footer-links h4{color:var(--white);font-size:0.85rem;font-weight:600;margin-bottom:1rem;}
+  .footer-links ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;}
+  .footer-links ul a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.8rem;transition:color 0.2s;}
+  .footer-links ul a:hover{color:var(--gold);}
+  .footer-bottom{text-align:center;font-size:0.75rem;max-width:1100px;margin:0 auto;}
+  /* Payment Modal */
+  .pay-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:1rem;}
+  .pay-modal-box{background:#fff;border-radius:20px;padding:2rem;max-width:400px;width:100%;text-align:center;box-shadow:0 25px 60px rgba(0,0,0,0.3);}
+  .pay-modal-box h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:0.25rem;color:#0a0f2e;}
+  .pay-modal-box .price{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:#c9a84c;margin-bottom:0.75rem;}
+  .pay-modal-box p{font-size:0.85rem;color:#6b7280;margin-bottom:1.25rem;}
+  .pay-modal-box input{width:100%;padding:0.75rem 1rem;border:2px solid rgba(10,15,46,0.12);border-radius:10px;font-size:0.9rem;margin-bottom:0.75rem;outline:none;font-family:'DM Sans',sans-serif;color:#0a0f2e;}
+  .pay-modal-box input:focus{border-color:#c9a84c;}
+  .pay-btn{width:100%;padding:0.9rem;background:#0a0f2e;color:#fff;border:none;border-radius:12px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;margin-bottom:0.5rem;transition:background 0.2s;}
+  .pay-btn:hover{background:#1a2a6c;}
+  .cancel-btn{width:100%;padding:0.5rem;background:none;border:none;color:#9ca3af;font-size:0.8rem;cursor:pointer;}
+  .success-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;padding:1rem;}
+  .success-box{background:#fff;border-radius:20px;padding:2.5rem;max-width:400px;width:100%;text-align:center;}
+  @media(max-width:768px){nav ul{display:none;}.hero-stats{gap:1.5rem;}.footer-top{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">PrepVault<span> NG</span></div>
+  <ul>
+    <li><a href="#banking">Banking</a></li>
+    <li><a href="#oilgas">Oil & Gas</a></li>
+    <li><a href="#consulting">Consulting</a></li>
+    <li><a href="#packs" class="nav-cta">Browse All Packs</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🇳🇬 Nigeria's Premier Exam Prep Vault</div>
+    <h1>Crack Every Nigerian <em>Exam</em> With Confidence</h1>
+    <p>From NNPC to GTBank, KPMG to ExxonMobil — real past questions, instant PDF download, verified answers. Your dream job is one exam away.</p>
+    <div class="hero-btns">
+      <a href="#packs" class="btn-primary">Browse All Packs</a>
+      <a href="#how" class="btn-secondary">How It Works</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">24+</span><span class="stat-label">Exam Packs</span></div>
+      <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Companies</span></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Instant Download</span></div>
+      <div class="stat"><span class="stat-num">₦1,500</span><span class="stat-label">Starting From</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="search-section">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="Search e.g. NNPC, GTBank, KPMG, Deloitte..." oninput="filterPacks()" />
+  </div>
+</div>
+
+<!-- BANKING PACKS -->
+<section class="section" id="banking">
+  <p class="section-label">🏦 Banking & Finance</p>
+  <h2 class="section-title">Banking Past Questions</h2>
+  <p class="section-sub">GTBank, Zenith, Access, UBA, First Bank — ace every banking aptitude test.</p>
+  <div class="packs-grid" id="banking-grid">
+
+    <div class="pack-card" data-name="gtbank zenith access uba first bank banking">
+      <span class="pack-tag">🔥 Mega Bundle</span>
+      <h3>Banking Mega Bundle</h3>
+      <p>GTBank, Zenith Bank, Access Bank & UBA past questions — 4 banks in one affordable pack with interview prep.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦3,000<span>4 banks · Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('Banking Mega Bundle','₦3,000',3000,'GTBank + Zenith + Access + UBA Past Questions Bundle','https://drive.google.com/file/d/140f68fNnGz5zLJ8ItLXCye8-3jx3s5w-/view?usp=drivesdk , https://drive.google.com/file/d/1447O_EY9PCvi4NMTn8uDm_qf8A9SXMl8/view?usp=drivesdk , https://drive.google.com/file/d/12xo4IZBRvo8gDxnMW1ZqCtP-AkR2uiHh/view?usp=drivesdk , https://drive.google.com/file/d/13mrT1wham69el85UY86Lr8zOIaAoX-de/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="gtbank guarantee trust bank past questions">
+      <span class="pack-tag">⭐ Popular</span>
+      <h3>GTBank Past Questions & Answers</h3>
+      <p>Real Guaranty Trust Bank aptitude test questions with detailed answers. Covers numerical, verbal & current affairs.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦1,500<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('GTBank Past Questions','₦1,500',1500,'GTBank Past Questions & Answers PDF','https://drive.google.com/file/d/140f68fNnGz5zLJ8ItLXCye8-3jx3s5w-/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="zenith bank past questions aptitude">
+      <span class="pack-tag">🏦 Banking</span>
+      <h3>Zenith Bank Past Questions</h3>
+      <p>Comprehensive Zenith Bank graduate trainee aptitude test questions with full answers and explanations.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦1,500<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('Zenith Bank Past Questions','₦1,500',1500,'Zenith Bank Past Questions PDF','https://drive.google.com/file/d/1447O_EY9PCvi4NMTn8uDm_qf8A9SXMl8/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="access bank graduate trainee test">
+      <span class="pack-tag">🏦 Banking</span>
+      <h3>Access Bank Graduate Trainee Pack</h3>
+      <p>Two Access Bank past question packs combined — aptitude test + graduate trainee screening questions.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦2,000<span>2 packs combined</span></div>
+        <button class="btn-buy" onclick="openPayModal('Access Bank Graduate Trainee Pack','₦2,000',2000,'Access Bank Graduate Trainee Past Questions','https://drive.google.com/file/d/12xo4IZBRvo8gDxnMW1ZqCtP-AkR2uiHh/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="uba united bank africa past questions">
+      <span class="pack-tag">🏦 Banking</span>
+      <h3>UBA Past Questions Bundle</h3>
+      <p>United Bank for Africa aptitude test + PQA — two comprehensive UBA recruitment packs in one.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦2,000<span>2 packs combined</span></div>
+        <button class="btn-buy" onclick="openPayModal('UBA Past Questions Bundle','₦2,000',2000,'UBA Past Questions Bundle PDF','https://drive.google.com/file/d/13mrT1wham69el85UY86Lr8zOIaAoX-de/view?usp=drivesdk , https://drive.google.com/file/d/13nptU5nzT-AIfxyeMj1KIS5jLpWb2EjV/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="first bank nigeria past questions answers">
+      <span class="pack-tag">🏦 Banking</span>
+      <h3>First Bank Past Questions</h3>
+      <p>First Bank of Nigeria aptitude test past questions with comprehensive answers and exam tips.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦1,500<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('First Bank Past Questions','₦1,500',1500,'First Bank Past Questions PDF','https://drive.google.com/file/d/133YbjlIccqee7ewXyGE_08cfwiZyKnd4/view?usp=drivesdk , https://drive.google.com/file/d/134usAVJTGGyF5tmeGSSHxdRUO8UxMn3b/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="diamond bank heritage past questions">
+      <span class="pack-tag">🏦 Banking</span>
+      <h3>Diamond Bank Past Questions</h3>
+      <p>Diamond Bank (now Access Bank) past questions — still very relevant for Access Bank aptitude tests.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦1,500<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('Diamond Bank Past Questions','₦1,500',1500,'Diamond Bank Past Questions PDF','https://drive.google.com/file/d/1GljAPttHgdj2UfRIMJ5aF2iZpc5eBB8V/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- OIL & GAS -->
+<section class="section featured" id="oilgas">
+  <p class="section-label" style="color:var(--gold-light)">🛢️ Oil & Gas</p>
+  <h2 class="section-title">Oil & Gas Past Questions</h2>
+  <p class="section-sub">NNPC, ExxonMobil and more — the highest paying sector in Nigeria.</p>
+  <div class="packs-grid">
+
+    <div class="pack-card" data-name="nnpc graduate trainee past questions">
+      <span class="pack-tag">🔥 Bestseller</span>
+      <h3>NNPC Graduate Trainee Bundle</h3>
+      <p>Two NNPC past question packs — PQA and aptitude test. Most comprehensive NNPC prep available.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦3,000<span>2 packs combined</span></div>
+        <button class="btn-buy" onclick="openPayModal('NNPC Graduate Trainee Bundle','₦3,000',3000,'NNPC Past Questions Bundle PDF','https://drive.google.com/file/d/13oDAvttRllK4CZyCripE_q6Sw-8Hx89Q/view?usp=drivesdk , https://drive.google.com/file/d/13oi_tSH6EwALNkojIR03Yt29RTLfI3o-/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="nnpc past questions aptitude test">
+      <span class="pack-tag">🛢️ Oil & Gas</span>
+      <h3>NNPC Past Questions & Answers</h3>
+      <p>Real NNPC aptitude test past questions with detailed answers. Covers numerical, verbal and abstract reasoning.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦2,000<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('NNPC Past Questions','₦2,000',2000,'NNPC Past Questions PDF','https://drive.google.com/file/d/13oDAvttRllK4CZyCripE_q6Sw-8Hx89Q/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="exxonmobil mobil past questions nigeria">
+      <span class="pack-tag">⭐ Premium</span>
+      <h3>ExxonMobil Past Questions</h3>
+      <p>ExxonMobil Nigeria graduate recruitment past questions. One of Nigeria's most competitive oil company tests.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦2,500<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('ExxonMobil Past Questions','₦2,500',2500,'ExxonMobil Past Questions PDF','https://drive.google.com/file/d/1NjIXJFRAA4XF4C50SHigQIjV8_XfvU2a/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONSULTING -->
+<section class="section" id="consulting">
+  <p class="section-label">💼 Consulting & Professional</p>
+  <h2 class="section-title">Consulting Firms Past Questions</h2>
+  <p class="section-sub">KPMG, Deloitte, PwC, EY — Big Four and top consulting firms.</p>
+  <div class="packs-grid">
+
+    <div class="pack-card" data-name="kpmg past questions aptitude verbal numerical">
+      <span class="pack-tag">🔥 Full Package</span>
+      <h3>KPMG Complete Pack</h3>
+      <p>Full KPMG package — verbal aptitude, numerical reasoning and critical reasoning. All three sections covered.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦3,500<span>3 packs combined</span></div>
+        <button class="btn-buy" onclick="openPayModal('KPMG Complete Pack','₦3,500',3500,'KPMG Complete Past Questions Pack PDF','https://drive.google.com/file/d/144OpRhbjTRwIc1BjMMThXCA0TXnO2L98/view?usp=drivesdk , https://drive.google.com/file/d/147VRNNvrSMuNiqfjCEDLz4jouuwZl4O4/view?usp=drivesdk , https://drive.google.com/file/d/147gmU27pHNkyvzstbNRTburH5_HIK5N6/view?usp=drivesdk , https://drive.google.com/file/d/148O846kGOOyzMawR1EobaeSA01a-Lk2K/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="deloitte past questions numerical verbal">
+      <span class="pack-tag">💼 Consulting</span>
+      <h3>Deloitte Past Questions Bundle</h3>
+      <p>Deloitte numerical solution pack + study pack combined. Full preparation for Deloitte aptitude screening.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦2,500<span>2 packs combined</span></div>
+        <button class="btn-buy" onclick="openPayModal('Deloitte Past Questions Bundle','₦2,500',2500,'Deloitte Past Questions Bundle PDF','https://drive.google.com/file/d/13eb0KAFcmHaFqGSP8tlvCXjiIqBK9Jqu/view?usp=drivesdk , https://drive.google.com/file/d/13fNmvmWd4yRrT1ReVD4xjN9QVtIx0Ze0/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="pwc pricewaterhousecoopers past questions">
+      <span class="pack-tag">💼 Consulting</span>
+      <h3>PwC Past Questions Bundle</h3>
+      <p>PricewaterhouseCoopers quantitative + verbal past questions. Complete PwC aptitude test preparation.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦2,500<span>2 packs combined</span></div>
+        <button class="btn-buy" onclick="openPayModal('PwC Past Questions Bundle','₦2,500',2500,'PwC Past Questions Bundle PDF','https://drive.google.com/file/d/13uV9CAvY-NgHhg-1MYvnPZWEo3j7W4BL/view?usp=drivesdk , https://drive.google.com/file/d/13zjqZu2dKMT4AAl8B_Ij7toC-uE8g10r/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="ey ernst young past questions">
+      <span class="pack-tag">💼 Consulting</span>
+      <h3>EY (Ernst & Young) Past Questions</h3>
+      <p>Real Ernst & Young Nigeria past questions for graduate and experienced hire recruitment tests.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦2,000<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('EY Past Questions','₦2,000',2000,'EY Ernst Young Past Questions PDF','https://drive.google.com/file/d/1AbzyE2VOzjsKoz8evgQfUGpONFlsPScF/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="gmat maths quantitative reasoning">
+      <span class="pack-tag">📊 Aptitude</span>
+      <h3>GMAT Maths & Quantitative</h3>
+      <p>GMAT quantitative section preparation — great for banking, consulting and oil & gas numerical tests.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦1,500<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('GMAT Maths Pack','₦1,500',1500,'GMAT Maths & Quantitative PDF','https://drive.google.com/file/d/1AbzyE2VOzjsKoz8evgQfUGpONFlsPScF/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="pack-card" data-name="diagrammatic reasoning abstract logical">
+      <span class="pack-tag">🧠 Reasoning</span>
+      <h3>Diagrammatic Reasoning Pack</h3>
+      <p>Master diagrammatic and abstract reasoning — tested by virtually all major Nigerian employers.</p>
+      <div class="pack-footer">
+        <div class="pack-price">₦1,500<span>Instant PDF</span></div>
+        <button class="btn-buy" onclick="openPayModal('Diagrammatic Reasoning Pack','₦1,500',1500,'Diagrammatic Reasoning Past Questions PDF','https://drive.google.com/file/d/1cl-6t_GSPOHAHqT4112yH3MCIkLQ_QOB/view?usp=drivesdk')">Buy Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section steps" id="how">
+  <p class="section-label">Simple Process</p>
+  <h2 class="section-title">How It Works</h2>
+  <p class="section-sub">Get your exam pack in under 3 minutes. No sign-up required.</p>
+  <div class="steps-grid">
+    <div class="step"><div class="step-num">1</div><h3>Pick Your Pack</h3><p>Browse by category or search for your specific company or exam.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Enter Your Email</h3><p>Enter your name and email — your download link will be sent there.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>Pay Securely</h3><p>Pay with card, bank transfer or USSD via Paystack. 100% safe.</p></div>
+    <div class="step"><div class="step-num">4</div><h3>Check Your Email</h3><p>Your PDF download link arrives instantly. Study anywhere, anytime.</p></div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>Your Dream Job Is One Exam Away</h2>
+  <p>Don't walk in unprepared. Get your pack today and give yourself the edge every Nigerian job seeker needs.</p>
+  <a href="#banking" class="btn-primary">Browse All Packs →</a>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">PrepVault<span style="color:rgba(255,255,255,0.5)"> NG</span></div>
+      <p>Nigeria's most complete exam prep platform. From banking to oil & gas to consulting.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#banking">Banking & Finance</a></li>
+        <li><a href="#oilgas">Oil & Gas</a></li>
+        <li><a href="#consulting">Consulting Firms</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="mailto:prepvaultng27@gmail.com">Email Us</a></li>
+        <li><a href="#">WhatsApp Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 PrepVault NG · All rights reserved · Payments secured by Paystack 🔒</p></div>
+</footer>
+
+<!-- PAYMENT MODAL -->
+<div class="pay-modal" id="pay-modal">
+  <div class="pay-modal-box">
+    <div style="font-size:1.5rem;margin-bottom:0.5rem;">🎉</div>
+    <h3 id="modal-pack-name"></h3>
+    <div class="price" id="modal-pack-price"></div>
+    <p>Enter your details — your PDF download link will be sent to your email after payment.</p>
+    <input id="pay-name" type="text" placeholder="Your full name" />
+    <input id="pay-email" type="email" placeholder="Your email address" />
+    <button class="pay-btn" onclick="startPayment()">Pay Now 💳</button>
+    <button class="cancel-btn" onclick="closePayModal()">Cancel</button>
+    <p style="font-size:0.7rem;color:#9ca3af;margin-top:0.5rem;">🔒 Card · Bank Transfer · USSD</p>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div class="success-modal" id="success-modal">
+  <div class="success-box">
+    <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:#0a0f2e;margin-bottom:0.5rem;">Payment Successful!</h3>
+    <p style="font-size:0.9rem;color:#6b7280;margin-bottom:1rem;">Your download link has been sent to your email. Check your inbox and spam folder!</p>
+    <p id="pay-ref" style="font-size:0.75rem;color:#9ca3af;margin-bottom:1.5rem;"></p>
+    <button onclick="document.getElementById('success-modal').style.display='none'" style="padding:0.75rem 2rem;background:#0a0f2e;color:#fff;border:none;border-radius:10px;font-size:0.9rem;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;">Close</button>
+  </div>
+</div>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init('ANCYRnARIQVsvD2uO');
+  var currentAmount = 0;
+  var currentPack = '';
+  var currentLinks = '';
+
+  function openPayModal(name, price, amount, packfull, links) {
+    currentAmount = amount;
+    currentPack = packfull;
+    currentLinks = links;
+    document.getElementById('modal-pack-name').textContent = name;
+    document.getElementById('modal-pack-price').textContent = price;
+    document.getElementById('pay-modal').style.display = 'flex';
+    setTimeout(() => document.getElementById('pay-name').focus(), 100);
+  }
+
+  function closePayModal() {
+    document.getElementById('pay-modal').style.display = 'none';
+  }
+
+  function startPayment() {
+    var name = document.getElementById('pay-name').value.trim();
+    var email = document.getElementById('pay-email').value.trim();
+    if (!name) { alert('Please enter your name.'); return; }
+    if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+    closePayModal();
+    var handler = PaystackPop.setup({
+      key: 'pk_live_9b525b28e6ec0c040f62a2cd25ba7a1bafd1e796',
+      email: email,
+      amount: currentAmount * 100,
+      currency: 'NGN',
+      ref: 'PVN-' + Date.now(),
+      metadata: { custom_fields: [{ display_name: 'Pack', variable_name: 'pack', value: currentPack }] },
+      callback: function(response) {
+        emailjs.send('service_36ba7qv', 'template_rvhaoip', {
+          buyer_name: name,
+          email: email,
+          pack_name: currentPack,
+          download_link: currentLinks,
+          payment_ref: response.reference
+        }).then(function() {
+          document.getElementById('pay-ref').textContent = 'Ref: ' + response.reference;
+          document.getElementById('success-modal').style.display = 'flex';
+        }, function() {
+          alert('✅ Payment received! Please email prepvaultng27@gmail.com with ref: ' + response.reference + ' to get your download link.');
+        });
+      },
+      onClose: function() {}
+    });
+    handler.openIframe();
+  }
+
+  function filterPacks() {
+    var query = document.getElementById('search-input').value.toLowerCase();
+    document.querySelectorAll('.pack-card').forEach(function(card) {
+      var keywords = card.getAttribute('data-name') || '';
+      var title = card.querySelector('h3') ? card.querySelector('h3').textContent.toLowerCase() : '';
+      card.style.display = (keywords.includes(query) || title.includes(query)) ? 'block' : 'none';
+    });
+  }
+</script>
+</body>
+</html>
